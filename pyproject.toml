@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ssm-ps-demo"
+version = "0.1.0"
+description = "An SSM Parameter Store wrapper example."
+authors = ["kdico <jokey_mixers_0u@icloud.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+boto3 = "^1.21.5"
+black = "^22.1.0"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
