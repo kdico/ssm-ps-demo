@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: ssm-ps-demo-consumer
+Globals:
+  Function:
+    Timeout: 15
+    MemorySize: 128
+Resources:
+  SSMParameterStoreDemo:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ..
+      Handler: ssm_ps_demo.consumer.handler
+      Runtime: python3.9
+      Environment:
+        Variables:
+          AWS_REGION:
+          AWS_ACCESS_KEY_ID:
+          AWS_SECRET_ACCESS_KEY:
+          STORE_FN_ARN:
+          # DEBUG: 1
